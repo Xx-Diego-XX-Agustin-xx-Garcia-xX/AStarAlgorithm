@@ -460,8 +460,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 33bbdb95ccc4b4577a62495732a02d3e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  width: 30
-  depth: 30
+  width: 10
+  depth: 10
   scale: 6
 --- !u!114 &1005088015
 MonoBehaviour:
@@ -476,8 +476,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maze: {fileID: 1005088014}
-  closedMaterial: {fileID: 0}
-  openMaterial: {fileID: 0}
+  closedMaterial: {fileID: 2100000, guid: a39ce23f4c7304a76aef66e35714e69b, type: 2}
+  openMaterial: {fileID: 2100000, guid: fc4647405fe19cb4aa8e2c084278e3ac, type: 2}
   start: {fileID: 302218380737281610, guid: ef44b7d2e6e35443aab13daf5583bd3e, type: 3}
   end: {fileID: 6856673923357348324, guid: a05f88bb7457d4e59bd0ee0e79575ce1, type: 3}
   path: {fileID: 4872082831671335508, guid: fbc327f82b9b646dca7e0960e120ec66, type: 3}

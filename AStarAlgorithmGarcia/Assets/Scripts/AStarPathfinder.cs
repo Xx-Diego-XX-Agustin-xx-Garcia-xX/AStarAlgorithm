@@ -73,10 +73,22 @@ public class AStarPathfinder : MonoBehaviour
             }
         }
         locations.Shuffle();
-        Vector3 startLocation = new Vector3(locations[0].x,0, locations[0].z);
+        Vector3 startLocation = new Vector3(locations[0].x * maze.scale,0, locations[0].z * maze.scale);
         startNode = new PathMarker(new MapLocation(locations[0].x, locations[0].z), 0, 0, 0, Instantiate(start, startLocation, Quaternion.identity), null);
         Vector3 endLocation = new Vector3(locations[1].x, 0, locations[1].z);
-        endNode = new PathMarker(new MapLocation(locations[1].x, locations[1].z), 0, 0, 0, Instantiate(start, startLocation, Quaternion.identity), null);
+        endNode = new PathMarker(new MapLocation(locations[1].x, locations[1].z), 0, 0, 0, Instantiate(end, endLocation, Quaternion.identity), null);
+        open.Clear();
+        closed.Clear();
+        open.Add(startNode);
+        lastPosition = startNode;
+    }
+    void Search(PathMarker thisNode)
+    {
+        if (thisNode.Equals(endNode))
+        {
+            done = true;
+            return;
+        }
     }
     void Start()
     {
@@ -84,6 +96,9 @@ public class AStarPathfinder : MonoBehaviour
     }
     void Update()
     {
-        
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            BeginSearch();
+        }
     }
 }
