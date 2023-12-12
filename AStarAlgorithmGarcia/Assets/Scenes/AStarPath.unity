@@ -460,8 +460,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 33bbdb95ccc4b4577a62495732a02d3e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  width: 10
-  depth: 10
+  width: 15
+  depth: 15
   scale: 6
 --- !u!114 &1005088015
 MonoBehaviour:
